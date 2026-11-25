@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carlos Núñez Durán · Portafolio</title>
+  <meta name="description" content="Portafolio de Carlos Núñez Durán, desarrollador de software: web, Android, escritorio e IoT.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Fondo: patrón tecnológico muy tenue y dos luces suaves -->
+  <div class="ambient" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span></div>
+
+  <div class="app">
+
+    <!-- ===== MENÚ LATERAL IZQUIERDO ===== -->
+    <aside class="sidebar" id="sidebar">
+      <div class="profile">
+        <figure class="avatar">
+          <img src="images/perfil.jpg" alt="Foto de Carlos Núñez Durán" data-avatar>
+          <span class="ini" aria-hidden="true">CN</span>
+        </figure>
+        <h2 class="p-name">Carlos Núñez Durán</h2>
+        <p class="p-meta" id="pMeta">Nicolás Romero, Edomex</p>
+        <p class="p-role">Desarrollador de software</p>
+        <p class="p-bio">Estudiante de Ingeniería en Desarrollo y Gestión de Software en la UTFV.</p>
+      </div>
+
+      <nav class="nav" aria-label="Secciones">
+        <a href="#inicio" data-go="inicio"><i data-i="home"></i><span>Inicio</span></a>
+        <a href="#sobre-mi" data-go="sobre-mi"><i data-i="user"></i><span>Sobre mí</span></a>
+        <a href="#proyectos" data-go="proyectos"><i data-i="grid"></i><span>Proyectos</span><b class="count" id="navCount"></b></a>
+        <a href="#trayectoria" data-go="trayectoria"><i data-i="route"></i><span>Trayectoria</span></a>
+        <a href="#habilidades" data-go="habilidades"><i data-i="layers"></i><span>Habilidades</span></a>
+      </nav>
+
+      <div class="side-foot">
+        <p class="talk">¿Platicamos?</p>
+        <div class="socials" id="socials"></div>
+        <p class="status"><span class="dot"></span>Abierto a prácticas y empleo</p>
+      </div>
+    </aside>
+
+    <!-- Barra superior solo en celular -->
+    <header class="topbar">
+      <a class="brand" href="#inicio" data-go="inicio">
+        <span class="avatar sm"><img src="images/perfil.jpg" alt="" data-avatar><span class="ini" aria-hidden="true">CN</span></span>
+        <strong>Carlos Núñez Durán</strong>
+      </a>
+      <button class="icon-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="sidebar"><i data-i="menu"></i></button>
+    </header>
+    <div class="scrim" id="scrim"></div>
+
+    <!-- ===== CONTENIDO (lado derecho) ===== -->
+    <main class="stage" id="stage">
+
+      <!-- INICIO -->
+      <section class="view" data-view="inicio" aria-label="Inicio">
+        <div class="hero">
+          <div class="hero-txt">
+            <p class="hello">Hola, soy Carlos</p>
+            <h1>Construyo software que resuelve problemas reales.</h1>
+            <p class="lead">Diseño y desarrollo soluciones web, móviles, de escritorio e IoT, pensadas para que sean claras, útiles y fáciles de usar para quien las necesita.</p>
+            <div class="actions">
+              <a class="btn primary" href="#proyectos" data-go="proyectos"><span>Ver proyectos</span><span class="bi"><i data-i="arrow"></i></span></a>
+              <a class="btn ghost" id="heroMail" href="mailto:ncarlosc13@gmail.com"><span>Escríbeme</span><span class="bi"><i data-i="mail"></i></span></a>
+            </div>
+          </div>
+
+          <!-- La "imagen" del inicio: una ficha en código -->
+          <div class="hero-art" aria-hidden="true">
+            <span class="halo"></span>
+            <div class="window">
+              <div class="win-bar"><span></span><span></span><span></span><em>carlos.js</em></div>
+<pre class="code"><span class="c">// disponible para prácticas y empleo</span>
+<span class="k">const</span> <span class="v">carlos</span> = {
+  <span class="p">rol</span>: <span class="s">"Desarrollador de software"</span>,
+  <span class="p">base</span>: <span class="s">"Nicolás Romero, Edomex"</span>,
+  <span class="p">estudia</span>: <span class="s">"Ing. en Software · UTFV"</span>,
+  <span class="p">construye</span>: [<span class="s">"web"</span>, <span class="s">"Android"</span>, <span class="s">"escritorio"</span>, <span class="s">"IoT"</span>],
+  <span class="p">logros</span>: [
+    <span class="s">"Finalista FECIEM 2026"</span>,
+    <span class="s">"1.er lugar Arduino Day 2026"</span>
+  ],
+  <span class="p">ahora</span>: <span class="s">"Inclusive Academy · Nestlé"</span>,
+  <span class="p">busca</span>: <span class="s">"su primer gran equipo"</span>
+};<span class="caret"></span></pre>
+            </div>
+          </div>
+        </div>
+
+        <ul class="stats">
+          <li><b id="statProjects">13</b><span>proyectos</span></li>
+          <li><b>1.er lugar</b><span>Arduino Day School 2026</span></li>
+          <li><b>Finalista</b><span>FECIEM 2026</span></li>
+          <li><b>4</b><span>plataformas: web, móvil, escritorio e IoT</span></li>
+        </ul>
+      </section>
+
+      <!-- SOBRE MÍ -->
+      <section class="view" data-view="sobre-mi" aria-label="Sobre mí">
+        <div class="about">
+          <div class="about-txt">
+            <h2>Pienso en la persona que va a usar lo que hago.</h2>
+            <p>Soy de Nicolás Romero, Estado de México. Estudio Ingeniería en Desarrollo y Gestión de Software en la UTFV, donde antes terminé el TSU en Desarrollo de Software Multiplataforma, y vengo del bachillerato técnico en Programación del CECyTEM.</p>
+            <p class="muted">Me gusta entender el problema antes de escribir código: escuchar a quien va a usar el sistema, proponer algo sencillo y entregarlo funcionando. Si un proyecto pide algo que no sé, lo aprendo.</p>
+            <p class="muted">Vivo con Artrogriposis Múltiple Congénita, una condición que, lejos de ser un límite, ha forjado mi carácter, mi resiliencia y mi capacidad de adaptación; cualidades que llevo a cada reto profesional.</p>
+            <p class="traits" id="traits"></p>
+          </div>
+          <ul class="facts">
+            <li><i data-i="store"></i><div><h3>Clientes reales</h3><p>He entregado sistemas y sitios web a negocios reales, del análisis a la entrega.</p></div></li>
+            <li><i data-i="chip"></i><div><h3>Me gusta el hardware</h3><p>Arduino, ESP32 y sensores. Pruebo por partes hasta que todo funciona junto.</p></div></li>
+            <li><i data-i="face"></i><div><h3>Juegos con la cámara</h3><p>Hago juegos con visión artificial, como un Pong que se controla moviendo la cabeza.</p></div></li>
+            <li><i data-i="mic"></i><div><h3>Hablo en público</h3><p>He dado pláticas motivacionales en mi comunidad universitaria y expuse mi proyecto en FECIEM.</p></div></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- PROYECTOS -->
+      <section class="view" data-view="proyectos" aria-label="Proyectos">
+        <header class="view-head row">
+          <div>
+            <h2>Proyectos</h2>
+            <p>Toca uno para ver los detalles y su repositorio.</p>
+          </div>
+          <div class="filters" id="filters" role="tablist" aria-label="Filtrar proyectos"></div>
+        </header>
+        <ul class="pgrid" id="pgrid" aria-label="Proyectos"></ul>
+        <div class="pager" id="pager"></div>
+      </section>
+
+      <!-- TRAYECTORIA -->
+      <section class="view" data-view="trayectoria" aria-label="Trayectoria">
+        <header class="view-head">
+          <h2>Trayectoria</h2>
+          <p>Lo que he hecho, lo que he ganado y dónde he aprendido.</p>
+        </header>
+        <div class="path">
+          <div><h3 class="col-title"><i data-i="briefcase"></i>Experiencia</h3><ol class="timeline" id="tlExp"></ol></div>
+          <div><h3 class="col-title"><i data-i="award"></i>Logros</h3><ol class="timeline" id="tlLog"></ol></div>
+          <div><h3 class="col-title"><i data-i="cap"></i>Formación</h3><ol class="timeline" id="tlEdu"></ol></div>
+        </div>
+      </section>
+
+      <!-- HABILIDADES -->
+      <section class="view" data-view="habilidades" aria-label="Habilidades">
+        <header class="view-head">
+          <h2>Habilidades</h2>
+          <p>Las herramientas que he usado en proyectos reales.</p>
+        </header>
+        <dl class="skills" id="skills"></dl>
+      </section>
+
+      <!-- Detalle de proyecto (panel que entra por la derecha) -->
+      <div class="sheet-scrim" id="sheetScrim"></div>
+      <article class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" hidden></article>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
